@@ -1,7 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
+#include "StructUtils/InstancedStruct.h"
 #include "InstancedStruct.h"
 #include "ToastieCutsceneAsset.generated.h"
 
@@ -194,5 +194,5 @@ public:
 #endif
 
 	virtual void PostInitProperties() override;
-	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	virtual void GetAssetRegistryTags(FAssetRegistryTagsContext Context) const override;
 };

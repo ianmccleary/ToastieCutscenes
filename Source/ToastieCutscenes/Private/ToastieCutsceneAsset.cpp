@@ -12,13 +12,13 @@ void UToastieCutsceneAsset::PostInitProperties()
 	Super::PostInitProperties();
 }
 
-void UToastieCutsceneAsset::GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const
+void UToastieCutsceneAsset::GetAssetRegistryTags(FAssetRegistryTagsContext Context) const
 {
 #if WITH_EDITORONLY_DATA
 	if (AssetImportData)
 	{
-		OutTags.Add(FAssetRegistryTag(SourceFileTagName(), AssetImportData->GetSourceData().ToJson(), FAssetRegistryTag::TT_Hidden));
+		Context.AddTag(FAssetRegistryTag(SourceFileTagName(), AssetImportData->GetSourceData().ToJson(), FAssetRegistryTag::TT_Hidden));
 	}
 #endif
-	Super::GetAssetRegistryTags(OutTags);
+	Super::GetAssetRegistryTags(Context);
 }

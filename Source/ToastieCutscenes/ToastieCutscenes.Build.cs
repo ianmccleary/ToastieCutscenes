@@ -35,8 +35,7 @@ public class ToastieCutscenes : ModuleRules
 				"CoreUObject",
 				"Engine",
 				"Slate",
-				"SlateCore",
-				"StructUtils"
+				"SlateCore"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

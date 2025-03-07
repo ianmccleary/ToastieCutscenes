@@ -38,8 +38,7 @@ public class ToastieCutscenesEditor : ModuleRules
 				"SlateCore",
 				"UnrealEd",
 				"AssetTools",
-				"ToastieCutscenes",
-				"StructUtils"
+				"ToastieCutscenes"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
